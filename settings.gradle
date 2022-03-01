@@ -1,0 +1,29 @@
+pluginManagement {
+    ext.kotlin_version = "1.4.10"
+    ext.koin_version = '2.2.0-rc-3'
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+        //阿里云jcenter仓库
+        maven{ url 'https://maven.aliyun.com/repository/jcenter' }
+        maven {
+            url 'https://jitpack.io'
+        }
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven{ url 'https://maven.aliyun.com/repository/jcenter' }
+        maven {
+            url 'https://jitpack.io'
+        }
+    }
+}
+rootProject.name = "StudyJetpack"
+include ':app'
+include ':common'
+include ':JetpackMVVM'
